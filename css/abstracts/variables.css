@@ -22,6 +22,7 @@
 
     /* Padding */
     --padding-body: 30px;
+    --padding-btn: .93rem 2.5rem;
 
     /* Sizing */
     --logo-width: 35px;
@@ -29,4 +30,7 @@
     /* Spacing */
     --spacing-heading-800: 35px;
     --spacing-heading-500: 17.4px;
+
+    /* Border Radius */
+    --btn-border-radius: 50vw;
 }

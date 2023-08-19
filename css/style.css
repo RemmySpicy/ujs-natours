@@ -1,5 +1,6 @@
-@import './variables.css';
-@import './animation.css';
+@import './abstracts/variables.css';
+@import './utilities/animation.css';
+@import './components/buttons.css';
 
 * {
     box-sizing: border-box;
@@ -49,11 +50,16 @@ body {
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
 
 
         .heading-primary {
             color: var(--clr-white);
             text-transform: uppercase;
+            margin-bottom: 60px;
+
+            /* To prevent child animated element from shaking effect at the end */
+            backface-visibility: hidden;
         }
         
         .heading-primary-main {
@@ -62,8 +68,7 @@ body {
             font-weight: var(--fw-400);
             letter-spacing: var(--spacing-heading-800);
 
-            animation-name: moveInLeft;
-            animation-duration: 2000ms;
+            animation: moveInLeft 1s ease-in-out;
         }
         
         .heading-primary-sub {
