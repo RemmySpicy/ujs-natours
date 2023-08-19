@@ -1,0 +1,32 @@
+:root {
+    --clr-white: #fff;
+    --clr-grey: #777;
+    --clr-green-light: #7ed56f;
+    --clr-green-medium: #55c57a;
+    --clr-green-dark: #28b485;
+    
+    --clr-green-light-transparent: rgb(126 213 111 / .8);
+    --clr-green-dark-transparent: rgb(40 100 131 / .8);
+
+    --ff-body: 'Lato', sans-serif;
+    
+    /* Font Size */
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-900: 3.75rem;
+
+    /* Font Weight */
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    /* Padding */
+    --padding-body: 30px;
+
+    /* Sizing */
+    --logo-width: 35px;
+
+    /* Spacing */
+    --spacing-heading-800: 35px;
+    --spacing-heading-500: 17.4px;
+}

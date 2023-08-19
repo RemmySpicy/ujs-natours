@@ -1,0 +1,76 @@
+@import './variables.css';
+@import './animation.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--clr-grey);
+    line-height: 1.7;
+    padding: var(--padding-body);
+}
+
+.header {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        var(--clr-green-light-transparent), 
+        var(--clr-green-dark-transparent)), 
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    
+
+    .logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    
+    .logo {
+        width: var(--logo-width);
+    }
+    
+
+    .text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        .heading-primary {
+            color: var(--clr-white);
+            text-transform: uppercase;
+        }
+        
+        .heading-primary-main {
+            display: block;
+            font-size: var(--fs-900);
+            font-weight: var(--fw-400);
+            letter-spacing: var(--spacing-heading-800);
+
+            animation-name: moveInLeft;
+            animation-duration: 2000ms;
+        }
+        
+        .heading-primary-sub {
+            display: block;
+            font-size: var(--fs-500);
+            font-weight: var(--fw-700);
+            letter-spacing: var(--spacing-heading-500);
+        }
+    }
+}
