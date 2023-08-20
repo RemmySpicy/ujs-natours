@@ -53,3 +53,17 @@ body {
         text-shadow: 5px 10px 20px rgb($clr-black, .2);
     }
 }
+
+.heading-tertiary {
+    font-size: $fs-400;
+    font-weight: $fw-700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $fs-400;
+
+    &:not(:last-child) {
+        margin-bottom: $fs-700;
+    }
+}
