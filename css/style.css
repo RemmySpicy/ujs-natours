@@ -123,6 +123,7 @@ body {
   /* Animated Buttons */
   /* White Buttons */
 }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -132,18 +133,22 @@ body {
   position: relative;
   transition: all 200ms ease-in-out;
 }
+
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
+
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .btn::after {
   position: absolute;
   top: 0;
@@ -156,15 +161,18 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
+
 .btn.btn--animated {
   animation: moveInBottom 0.5s ease-in-out 0.5s;
   /* Apply the animation start before the delay timer trigers */
   animation-fill-mode: backwards;
 }
+
 .btn.btn--white {
   background-color: #fff;
   color: #777;
 }
+
 .btn.btn--white::after {
   background-color: #fff;
 }
@@ -178,15 +186,61 @@ body {
   padding: 3px;
   transition: all 0.2s;
 }
+
 .btn-text:hover {
   background-color: #28b485;
   color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
+
 .btn-text:active {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
   transform: translateY(0);
+}
+
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
+.composition {
+  position: relative;
+  transition: all 0.2s;
+}
+
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10;
+  outline-offset: 1.25rem;
+  transition: all 0.2s;
+}
+
+.composition__photo--p1 {
+  left: 0;
+  top: -20px;
+}
+
+.composition__photo--p2 {
+  right: 0;
+  top: 20px;
+}
+
+.composition__photo--p3 {
+  left: 20%;
+  top: 6.25rem;
+}
+
+.composition__photo:hover {
+  outline: 1rem solid #28b485;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 25px 40px black;
+  z-index: 11;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
 }
 
 /* Padding */
