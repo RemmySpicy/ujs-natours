@@ -1,0 +1,19 @@
+{
+  "name": "ujs-natours",
+  "version": "1.0.0",
+  "description": "Project Natours by Jonas Schmedtmann",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemmySpicy/ujs-natours.git"
+  },
+  "keywords": [],
+  "author": "Remilekun Olayinka",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}

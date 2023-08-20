@@ -1,7 +1,8 @@
-// Colors
+// COLORS
 $clr-white: #fff;
 $clr-black: #000;
 $clr-grey-dark: #777;
+$clr-grey-light-1: #f7f7f7;
 $clr-green-light: #7ed56f;
 $clr-green-medium: #55c57a;
 $clr-green-dark: #28b485;
@@ -11,12 +12,13 @@ $clr-green-dark-transparent: rgb($clr-green-dark, .8);
 
 $ff-body: 'Lato', sans-serif;
 
-/* Font Size */
+// FONT SIZE
 $fs-400: 1rem;
 $fs-500: 1.25rem;
+$fs-800: 2.18rem;
 $fs-900: 3.75rem;
 
-/* Font Weight */
+// FONT WEIGHT
 $fw-400: 400;
 $fw-700: 700;
 $fw-900: 900;
@@ -24,6 +26,7 @@ $fw-900: 900;
 /* Padding */
 $padding-body: 30px;
 $padding-btn: .93rem 2.5rem;
+$padding-section-about: 15.625rem;
 
 /* Sizing */
 $logo-width: 35px;
@@ -34,3 +37,9 @@ $spacing-heading-500: 17.4px;
 
 /* Border Radius */
 $btn-border-radius: 50vw;
+
+
+// GRID
+$grid-width: 75.25rem;
+$gutter-vertical: 5rem;
+$gutter-horizontal: 3.75rem;

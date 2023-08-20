@@ -1,81 +1,245 @@
-@import './abstracts/variables.css';
-@import './utilities/animation.css';
-@import './components/buttons.css';
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
+/* html {
+    font-size: 62.5%;
+} */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
 body {
-    font-family: var(--ff-body);
-    font-size: var(--fs-400);
-    font-weight: var(--fw-400);
-    color: var(--clr-grey);
-    line-height: 1.7;
-    padding: var(--padding-body);
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.7;
+  padding: 30px;
 }
 
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  /* To prevent child animated element from shaking effect at the end */
+  backface-visibility: hidden;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation: moveInLeft 1s ease-in-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 2.18rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  color: transparent;
+  transition: all 0.2s;
+}
+
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-5 {
+  margin-bottom: 5rem;
+}
+
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
+.btn {
+  /* Animated Buttons */
+  /* White Buttons */
+}
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.93rem 2.5rem;
+  display: inline-block;
+  border-radius: 50vw;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50vw;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn.btn--animated {
+  animation: moveInBottom 0.5s ease-in-out 0.5s;
+  /* Apply the animation start before the delay timer trigers */
+  animation-fill-mode: backwards;
+}
+.btn.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn.btn--white::after {
+  background-color: #fff;
+}
+
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
+.row {
+  max-width: 75.25rem;
+  margin-inline: auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^=col-] {
+  float: left;
+}
+
+.row [class^=col-]:not(:last-child) {
+  margin-right: 3.75rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 3.75rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 3.75rem) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 3.75rem) / 3) + 3.75rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 3.75rem) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 3.75rem) / 4) + 3.75rem);
+}
+
+.row .col-3-of-4 {
+  width: calc(3 * (100% - 3 * 3.75rem) / 4 + (2* 3.75rem));
+}
+
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
 .header {
-    position: relative;
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom, 
-        var(--clr-green-light-transparent), 
-        var(--clr-green-dark-transparent)), 
-        url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-    
-
-    .logo-box {
-        position: absolute;
-        top: 40px;
-        left: 40px;
-    }
-    
-    .logo {
-        width: var(--logo-width);
-    }
-    
-
-    .text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-
-        .heading-primary {
-            color: var(--clr-white);
-            text-transform: uppercase;
-            margin-bottom: 60px;
-
-            /* To prevent child animated element from shaking effect at the end */
-            backface-visibility: hidden;
-        }
-        
-        .heading-primary-main {
-            display: block;
-            font-size: var(--fs-900);
-            font-weight: var(--fw-400);
-            letter-spacing: var(--spacing-heading-800);
-
-            animation: moveInLeft 1s ease-in-out;
-        }
-        
-        .heading-primary-sub {
-            display: block;
-            font-size: var(--fs-500);
-            font-weight: var(--fw-700);
-            letter-spacing: var(--spacing-heading-500);
-        }
-    }
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
+
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header__logo {
+  width: 35px;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding-block: 15.625rem;
+  margin-top: -20vh;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -34,3 +34,22 @@ body {
         letter-spacing: $spacing-heading-500;
     }
 }
+
+
+.heading-secondary {
+    display: inline-block;
+    font-size: $fs-800;
+    text-transform: uppercase;
+    font-weight: $fw-700;
+    background-image: linear-gradient(to right, $clr-green-light, $clr-green-dark);
+    // background-clip: text;
+    -webkit-background-clip: text;
+    letter-spacing: 2px;
+    color: transparent;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: 5px 10px 20px rgb($clr-black, .2);
+    }
+}
