@@ -1,0 +1,36 @@
+@import '../abstracts';
+
+body {
+    font-family: $ff-body;
+    font-size: $fs-400;
+    font-weight: $fw-400;
+    color: $clr-grey-dark;
+    line-height: 1.7;
+    padding: $padding-body;
+}
+
+.heading-primary {
+    color: $clr-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    /* To prevent child animated element from shaking effect at the end */
+    backface-visibility: hidden;
+    
+    
+    &--main {
+        display: block;
+        font-size: $fs-900;
+        font-weight: $fw-400;
+        letter-spacing: $spacing-heading-800;
+
+        animation: moveInLeft 1s ease-in-out;
+    }
+    
+    &--sub {
+        display: block;
+        font-size: $fs-500;
+        font-weight: $fw-700;
+        letter-spacing: $spacing-heading-500;
+    }
+}

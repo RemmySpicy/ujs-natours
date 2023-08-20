@@ -1,0 +1,62 @@
+@import '../abstracts'; 
+
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: $padding-btn;
+        display: inline-block;
+        border-radius: $btn-border-radius;
+        position: relative;
+        
+        transition: all 200ms ease-in-out;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgb($clr-black, .2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgb($clr-black, .2);
+    }
+   
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: $btn-border-radius;
+        z-index: -1;
+
+        transition: all .4s;
+    }
+
+    /* Animated Buttons */
+    &.btn--animated {
+        animation: moveInBottom .5s ease-in-out .5s;
+
+        /* Apply the animation start before the delay timer trigers */
+        animation-fill-mode: backwards;
+    }
+
+    /* White Buttons */
+    &.btn--white {
+        background-color: $clr-white;
+        color: $clr-grey-dark;
+
+        &::after {
+            background-color: $clr-white;
+        }
+    }
+}

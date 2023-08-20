@@ -1,0 +1,36 @@
+// Colors
+$clr-white: #fff;
+$clr-black: #000;
+$clr-grey-dark: #777;
+$clr-green-light: #7ed56f;
+$clr-green-medium: #55c57a;
+$clr-green-dark: #28b485;
+
+$clr-green-light-transparent: rgb($clr-green-light, .8);
+$clr-green-dark-transparent: rgb($clr-green-dark, .8);
+
+$ff-body: 'Lato', sans-serif;
+
+/* Font Size */
+$fs-400: 1rem;
+$fs-500: 1.25rem;
+$fs-900: 3.75rem;
+
+/* Font Weight */
+$fw-400: 400;
+$fw-700: 700;
+$fw-900: 900;
+
+/* Padding */
+$padding-body: 30px;
+$padding-btn: .93rem 2.5rem;
+
+/* Sizing */
+$logo-width: 35px;
+
+/* Spacing */
+$spacing-heading-800: 35px;
+$spacing-heading-500: 17.4px;
+
+/* Border Radius */
+$btn-border-radius: 50vw;
