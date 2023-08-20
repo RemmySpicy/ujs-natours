@@ -247,6 +247,33 @@ body {
 /* Sizing */
 /* Spacing */
 /* Border Radius */
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 0.93rem;
+  padding: 1.56rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0.93rem 2.5rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.feature-box__icon {
+  font-size: 3.75rem;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-image: linear-gradient(to right, #28b485, #7ed56f);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.feature-box:hover {
+  transform: translateY(-0.93rem) scale(1.03);
+}
+
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
 .row {
   max-width: 75.25rem;
   margin-inline: auto;
@@ -330,8 +357,20 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding-block: 15.625rem;
+  padding-block: 15.62rem;
   margin-top: -20vh;
+}
+
+.section-features {
+  padding: 12.5rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  margin-top: -5rem;
+  transform: skewY(-7deg);
+}
+.section-features > * {
+  transform: skewY(7deg);
 }
 
 /*# sourceMappingURL=style.css.map */

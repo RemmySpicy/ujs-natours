@@ -13,6 +13,7 @@ $clr-green-dark-transparent: rgb($clr-green-dark, .8);
 $ff-body: 'Lato', sans-serif;
 
 // FONT SIZE
+$fs-300: .93rem;
 $fs-400: 1rem; // 16px
 $fs-500: 1.25rem; // 
 $fs-700: 1.87rem; // 30px
@@ -27,7 +28,8 @@ $fw-900: 900;
 /* Padding */
 $padding-body: 30px;
 $padding-btn: .93rem 2.5rem;
-$padding-section-about: 15.625rem;
+$padding-section-about: 15.62rem;
+$padding-section-features: 12.5rem;
 
 /* Sizing */
 $logo-width: 35px;

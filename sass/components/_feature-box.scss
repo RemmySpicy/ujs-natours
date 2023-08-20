@@ -1,0 +1,24 @@
+@import '../abstracts';
+
+.feature-box {
+    background-color: rgb($clr-white, .8);
+    font-size: $fs-300;
+    padding: 1.56rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 .93rem 2.5rem rgb($clr-black, .15);
+    transition: transform .3s;
+
+    &__icon {
+        font-size: 3.75rem;
+        margin-bottom: 5px;
+        display: inline-block;
+        background-image: linear-gradient(to right, $clr-green-dark, $clr-green-light);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover {
+        transform: translateY(-.93rem) scale(1.03);
+    }
+}

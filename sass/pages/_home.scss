@@ -3,3 +3,21 @@
     padding-block: $padding-section-about;
     margin-top: -20vh;
 }
+
+.section-features {
+    padding: $padding-section-features;
+    background-image: linear-gradient(
+        to right bottom, 
+        $clr-green-light-transparent, 
+        $clr-green-dark-transparent), 
+        url(../img/nat-4.jpg);
+    background-size: cover;
+    background-position: top;
+    margin-top: -5rem;
+
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}
