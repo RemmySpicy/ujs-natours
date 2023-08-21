@@ -179,16 +179,16 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1rem;
-  color: #28b485;
+  color: #55c57a;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #28b485;
+  border-bottom: 1px solid #55c57a;
   padding: 3px;
   transition: all 0.2s;
 }
 
 .btn-text:hover {
-  background-color: #28b485;
+  background-color: #55c57a;
   color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
@@ -233,7 +233,7 @@ body {
 }
 
 .composition__photo:hover {
-  outline: 1rem solid #28b485;
+  outline: 1rem solid #55c57a;
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 25px 40px black;
   z-index: 11;
@@ -268,6 +268,121 @@ body {
 
 .feature-box:hover {
   transform: translateY(-0.93rem) scale(1.03);
+}
+
+/* Padding */
+/* Sizing */
+/* Spacing */
+/* Border Radius */
+.card {
+  position: relative;
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  height: 34rem;
+}
+
+.card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 34rem;
+  width: 100%;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__side--front {
+  background-color: #fff;
+}
+
+.card__side--back {
+  transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+
+.card__picture {
+  background-size: cover;
+  height: 14.37rem;
+  background-blend-mode: screen;
+  --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+
+.card__picture--2 {
+  background-image: url(../img/nat-5.jpg);
+}
+
+.card__picture--3 {
+  background-image: url(../img/nat-5.jpg);
+}
+
+.card__heading {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 7.5rem;
+  right: 1.25rem;
+  text-align: right;
+  width: 70%;
+}
+
+.card__heading-span {
+  padding: 10px 0.92rem;
+  -webkit-box-decoration-break: clone;
+}
+
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+
+.card__details {
+  padding: 1.87rem;
+}
+
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.card__details ul li {
+  text-align: center;
+  font-size: 0.93rem;
+  padding: 0.92rem;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__price-value {
+  font-size: 3.75rem;
 }
 
 /* Padding */
@@ -334,6 +449,7 @@ body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  --webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
@@ -371,6 +487,12 @@ body {
 }
 .section-features > * {
   transform: skewY(7deg);
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 15.62rem 0 3.12rem 0;
+  margin-top: -6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

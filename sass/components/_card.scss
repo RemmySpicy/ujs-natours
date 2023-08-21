@@ -1,0 +1,130 @@
+@import '../abstracts';
+
+.card {
+    // FUNCTIONALITY
+    position: relative;
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    height: 34rem;
+
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 34rem;
+        width: 100%;
+        transition: all .8s ease;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgb($clr-black, .15);
+        
+        &--front {
+            background-color: $clr-white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $clr-secondary-light, $clr-secondary-dark);
+            } 
+        }
+    }
+
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+  
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 14.37rem;
+        background-blend-mode: screen;
+        --webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $clr-secondary-light, $clr-secondary-dark), url(../img/nat-5.jpg);
+
+        }
+        
+        &--2 {
+            background-image: url(../img/nat-5.jpg);
+
+        }
+        
+        &--3 {
+            background-image: url(../img/nat-5.jpg);
+
+        }
+    }
+
+    &__heading {
+        font-size: $fs-600;
+        text-transform: uppercase;
+        color: $clr-white;
+        position: absolute;
+        top: 7.5rem;
+        right: 1.25rem;
+        text-align: right;
+        width: 70%;
+    }
+
+    &__heading-span {
+        padding: 10px .92rem;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgb($clr-secondary-light, .85), 
+                rgb($clr-secondary-dark, .85))
+        }
+    }
+
+    &__details {
+        padding: 1.87rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin-inline: auto;
+
+            li {
+                text-align: center;
+                font-size: $fs-300;
+                padding: .92rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $clr-grey-light-2;   
+                }
+            }
+        }
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__price-box {
+
+    }
+
+    &__price-only {
+
+    }
+
+    &__price-value {
+        font-size: $fs-900;
+    }
+}
