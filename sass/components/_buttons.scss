@@ -43,7 +43,7 @@
     }
 
     /* Animated Buttons */
-    &.btn--animated {
+    &--animated {
         animation: moveInBottom .5s ease-in-out .5s;
 
         /* Apply the animation start before the delay timer trigers */
@@ -51,12 +51,22 @@
     }
 
     /* White Buttons */
-    &.btn--white {
+    &--white {
         background-color: $clr-white;
         color: $clr-grey-dark;
 
         &::after {
             background-color: $clr-white;
+        }
+    }
+
+    // GREEN BUTTONS
+    &--green {
+        background-color: $clr-primary;
+        color: $clr-white;
+
+        &::after {
+            background-color: $clr-primary;
         }
     }
 }
