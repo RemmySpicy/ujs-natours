@@ -216,10 +216,6 @@ body {
   transform: translateY(0);
 }
 
-/* Padding */
-/* Sizing */
-/* Spacing */
-/* Border Radius */
 .composition {
   position: relative;
   transition: all 0.2s;
@@ -260,10 +256,6 @@ body {
   transform: scale(0.95);
 }
 
-/* Padding */
-/* Sizing */
-/* Spacing */
-/* Border Radius */
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 0.93rem;
@@ -287,10 +279,6 @@ body {
   transform: translateY(-0.93rem) scale(1.03);
 }
 
-/* Padding */
-/* Sizing */
-/* Spacing */
-/* Border Radius */
 .card {
   position: relative;
   perspective: 100rem;
@@ -431,6 +419,13 @@ body {
   font-size: 3.75rem;
 }
 
+.story {
+  width: 75%;
+  margin-inline: auto;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
 /* Padding */
 /* Sizing */
 /* Spacing */
@@ -482,10 +477,6 @@ body {
   width: calc(3 * (100% - 3 * 3.75rem) / 4 + (2* 3.75rem));
 }
 
-/* Padding */
-/* Sizing */
-/* Spacing */
-/* Border Radius */
 .header {
   position: relative;
   height: 95vh;
@@ -539,6 +530,11 @@ body {
   background-color: #f7f7f7;
   padding: 15.62rem 0 9.36rem 0;
   margin-top: -6rem;
+}
+
+.section-stories {
+  padding: 9.37rem 0;
+  background-color: #f7f7f7;
 }
 
 /*# sourceMappingURL=style.css.map */

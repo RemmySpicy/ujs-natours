@@ -1,4 +1,4 @@
-@import '../abstracts';
+@use '../abstracts' as *;
 
 .feature-box {
     background-color: rgb($clr-white, .8);

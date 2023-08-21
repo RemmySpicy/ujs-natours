@@ -1,4 +1,4 @@
-@import '../abstracts';
+@use '../abstracts' as *;
 
 .row {
     max-width: $grid-width;
