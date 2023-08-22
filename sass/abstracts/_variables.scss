@@ -2,15 +2,14 @@
 $clr-white: #fff;
 $clr-black: #000;
 $clr-grey-dark: #777;
+$clr-grey-dark-2: #999;
 $clr-grey-light-1: #f7f7f7;
 $clr-grey-light-2: #eee;
 $clr-primary: #55c57a;
 $clr-primary-light: #7ed56f;
 $clr-primary-dark: #28b485;
-
 $clr-secondary-light: #ffb900;
 $clr-secondary-dark: #ff7730;
-
 $clr-tertiary-light: #2988ff;
 $clr-tertiary-dark: #5643fa;
 
@@ -20,6 +19,7 @@ $clr-green-dark-transparent: rgb($clr-primary-dark, .8);
 $ff-body: 'Lato', sans-serif;
 
 // FONT SIZE
+$fs-100: .75rem; // 12px
 $fs-200: .87rem; // 14px
 $fs-300: .93rem; // 15px
 $fs-400: 1rem; // 16px
