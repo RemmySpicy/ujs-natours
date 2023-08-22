@@ -15,7 +15,7 @@
         width: 100%;
         transition: all .8s ease;
         backface-visibility: hidden;
-        border-radius: 3px;
+        border-radius: $border-radius-1;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgb($clr-black, .15);
         

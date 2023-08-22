@@ -41,19 +41,22 @@ $padding-section-about: 15.62rem;
 $padding-section-features: 12.5rem;
 $padding-section-tours: 15.62rem 0 9.36rem 0;
 $padding-section-stories: 9.37rem 0;
-
-/* Sizing */
-$logo-width: 35px;
+$padding-section-book: 9.37rem 0;
 
 /* Spacing */
 $spacing-heading-800: 35px;
 $spacing-heading-500: 17.4px;
 
 /* Border Radius */
+$border-radius-1: 3px;
 $btn-border-radius: 50vw;
 
 
-// GRID
+
+// SIZING
+$logo-width: 35px;
+
+// grid
 $grid-width: 75.25rem;
 $gutter-vertical: 5rem;
 $gutter-horizontal: 3.75rem;

@@ -1,5 +1,4 @@
 /* Padding */
-/* Sizing */
 /* Spacing */
 /* Border Radius */
 /* html {
@@ -14,7 +13,6 @@
 }
 
 /* Padding */
-/* Sizing */
 /* Spacing */
 /* Border Radius */
 body {
@@ -124,7 +122,6 @@ body {
 }
 
 /* Padding */
-/* Sizing */
 /* Spacing */
 /* Border Radius */
 .btn {
@@ -495,7 +492,6 @@ body {
 }
 
 /* Padding */
-/* Sizing */
 /* Spacing */
 /* Border Radius */
 .row {
@@ -604,6 +600,18 @@ body {
 .section-stories {
   position: relative;
   padding: 9.37rem 0;
+}
+
+.section-book {
+  padding: 9.37rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.book {
+  background-image: url(/img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  height: 30rem;
 }
 
 /*# sourceMappingURL=style.css.map */

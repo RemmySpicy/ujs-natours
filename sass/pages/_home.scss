@@ -32,3 +32,16 @@
     position: relative;
     padding: $padding-section-stories;
 }
+
+.section-book {
+    padding: $padding-section-book;
+    background-image: linear-gradient(to right bottom, $clr-primary-light, $clr-primary-dark);
+}
+
+.book {
+    background-image: url(/img/nat-10.jpg);
+    background-size: cover;
+    border-radius: $border-radius-1;
+
+    height: 30rem;
+}
