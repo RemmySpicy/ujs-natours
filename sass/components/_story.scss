@@ -3,7 +3,63 @@
 .story {
     width: 75%;
     margin-inline: auto;
-    // box-shadow: 0 1.87rem 3.75rem rgb($clr-black, .1);
+    box-shadow: 0 1.87rem 3.75rem rgb($clr-black, .1);
     background-color: $clr-white;
     border-radius: 3px;
+    padding: 3.75rem;
+    padding-left: 5.52rem;
+    font-size: $fs-400;
+    transform: skewX(-12deg);
+
+    & > * {
+        transform: skewX(12deg);
+    }
+
+    &__shape {
+        width: 9.37rem;
+        height: 9.37rem;
+        // background-color: purple;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        // transform: translateX(-1.87rem);
+        translate: -1.87rem;
+        position: relative;
+    }
+
+    &__image {
+        height: 100%;
+        translate: -2.3rem;
+        scale: 1.4;
+        transition: all .5s;
+    }
+
+    &__text {
+        // padding: auto;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% 20%;
+        text-transform: uppercase;
+        text-align: center;
+        color: $clr-white;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+    
+    &:hover &__caption {
+        opacity: 1;
+        translate: -50% -50%;
+    }
+
+    &:hover &__image {
+        scale: 1;
+        filter: blur(3px) brightness(90%);
+    }
 }
