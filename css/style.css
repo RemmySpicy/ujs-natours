@@ -53,6 +53,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
   -webkit-background-clip: text;
   letter-spacing: 2px;
   color: transparent;
@@ -268,6 +269,7 @@ body {
   margin-bottom: 5px;
   display: inline-block;
   background-image: linear-gradient(to right, #28b485, #7ed56f);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -357,6 +359,7 @@ body {
 
 .card__heading-span {
   padding: 10px 0.92rem;
+  box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 

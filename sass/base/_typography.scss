@@ -42,7 +42,7 @@ body {
     text-transform: uppercase;
     font-weight: $fw-700;
     background-image: linear-gradient(to right, $clr-primary-light, $clr-primary-dark);
-    // background-clip: text;
+    background-clip: text;
     -webkit-background-clip: text;
     letter-spacing: 2px;
     color: transparent;

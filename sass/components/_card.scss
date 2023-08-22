@@ -84,6 +84,7 @@
 
     &__heading-span {
         padding: 10px .92rem;
+        box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
 
         &--1 {
