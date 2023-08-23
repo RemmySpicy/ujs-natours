@@ -16,6 +16,7 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        transition: all .3s;
     }
 
     &__input:focus {
@@ -46,5 +47,50 @@
         opacity: 0;
         visibility: hidden;
         translate: 0 -40px;
+    }
+
+
+    // RADIO GROUP
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $fs-400;
+        position: relative;
+        cursor: pointer;
+        padding-left: 2.5rem;
+    }
+
+    &__radio-button {
+        position: absolute;
+        height: 1.87rem;
+        width: 1.87rem;
+        border: 5px solid $clr-primary;
+        border-radius: 50%;
+        display: inline-block;
+        top: -4px;
+        left: 0;
+
+        &::after {
+            @include centerDiv;
+            content: '';
+            display: inline-block;
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%;
+            background-color: $clr-primary;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
+    
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
     }
 }
