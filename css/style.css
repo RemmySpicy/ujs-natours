@@ -103,7 +103,7 @@ body {
   }
 }
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-top-s {
@@ -111,39 +111,39 @@ body {
 }
 
 .u-margin-top-m {
-  margin-top: 2.5rem;
+  margin-top: 2.5rem !important;
 }
 
 .u-margin-top-l {
-  margin-top: 5rem;
+  margin-top: 5rem !important;
 }
 
 .u-margin-top-xl {
-  margin-top: 6.25rem;
+  margin-top: 6.25rem !important;
 }
 
 .u-margin-top-xxl {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .u-margin-bottom-s {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .u-margin-bottom-m {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem !important;
 }
 
 .u-margin-bottom-l {
-  margin-bottom: 5rem;
+  margin-bottom: 5rem !important;
 }
 
 .u-margin-bottom-xl {
-  margin-bottom: 6.25rem;
+  margin-bottom: 6.25rem !important;
 }
 
 .u-margin-bottom-xxl {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 /* Padding */
@@ -154,14 +154,17 @@ body {
   /* White Buttons */
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.93rem 2.5rem;
   display: inline-block;
   border-radius: 50vw;
   position: relative;
+  font-size: 1rem;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
+  border: none;
 }
 
 .btn:hover {
@@ -174,7 +177,8 @@ body {
   opacity: 0;
 }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -732,7 +736,7 @@ body {
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 0.93rem 2.5rem rgba(0, 0, 0, 0.2);
-  height: 30rem;
+  height: 32rem;
 }
 .book__form {
   width: 50%;

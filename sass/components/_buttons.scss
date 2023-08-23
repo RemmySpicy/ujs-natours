@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -9,8 +10,14 @@
         display: inline-block;
         border-radius: $btn-border-radius;
         position: relative;
-        
+        font-size: $fs-400;
+
         transition: all 200ms ease-in-out;
+
+        // Modification for <button> elements
+        cursor: pointer;
+        border: none;
+        
     }
 
     &:hover {
@@ -23,7 +30,9 @@
         }
     }
     
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgb($clr-black, .2);
     }
