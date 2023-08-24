@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $clr-white;
+        height: 4.37rem;
+        width: 4.37rem;
+        position: fixed;
+        top: 3.75rem;
+        right: 3.75rem;
+        border-radius: 50%;
+        z-index: 2000;
+    }
+
+    &__background {
+        height: 3.75rem;
+        width: 3.75rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 4.06rem;
+        right: 4.06rem;
+        background-image: radial-gradient($clr-primary-light, $clr-primary-dark);
+        z-index: 1000;
+
+        transform: scale(80);
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+    }
+
+    &__list {
+        @include centerDiv;
+        list-style: none;
+        text-align: center;
+    }
+    
+    &__item {
+        margin: .62rem;
+    }
+    
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: $fs-700;
+            font-weight: $fw-300;
+            padding: .62rem 1.25rem;
+            color: $clr-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 50%, $clr-white 50%);
+            background-size: 220%;
+            transition: all .4s;
+
+            span {
+                display: inline-block;
+                margin-right: .62rem;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $clr-primary;
+            transform: translateX(.62rem);
+        }
+    }
+}
