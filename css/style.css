@@ -615,6 +615,61 @@ body {
   opacity: 1;
 }
 
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2);
+  display: table;
+  overflow: hidden;
+}
+
+.popup__left {
+  width: 33.333333%;
+  display: table-cell;
+}
+
+.popup__right {
+  width: 66.666667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1.87rem 3.12rem;
+}
+
+.popup__img {
+  display: block;
+  width: 100%;
+}
+
+.popup__text {
+  font-size: 0.87rem;
+  margin-bottom: 2.5rem;
+  -moz-column-count: 2;
+  -moz-column-gap: 2.5rem;
+  -moz-column-rule: 1px solid #eee;
+  column-count: 2;
+  column-gap: 2.5rem;
+  column-rule: 1px solid #eee;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 /* Padding */
 /* Spacing */
 /* Border Radius */
