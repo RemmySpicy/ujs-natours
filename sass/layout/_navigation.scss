@@ -15,6 +15,8 @@
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 .62rem 1.87rem rgb($clr-black, .1);
+        text-align: center;
+        cursor: pointer;   
     }
 
     &__background {
@@ -80,6 +82,7 @@
         }
     }
 
+    // FUNCTIONALITY
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
@@ -88,4 +91,59 @@
         opacity: 1;
         width: 100%;
     }
+
+    // NAVIGATION ICON
+    &__icon {
+        position: relative;
+        margin-top: 2.1rem;
+        
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 1.87rem;
+            height: 2px;
+            background-color: $clr-grey-dark-3;
+            border-radius: 50vw;
+            transition: all .2s;
+        }
+        
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;            
+        }
+
+        &::before {
+            top: -.55rem;
+        }
+
+        &::after {
+            top: .55rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -.63rem;         
+    }
+
+    &__button:hover &__icon::after {
+        top: .63rem;         
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+    
+    &__checkbox:checked + &__button &__icon::after {
+        transform: rotate(-135deg);
+        top: 0;
+    }
+
 }
