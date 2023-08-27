@@ -1,7 +1,13 @@
+@use '../abstracts' as *;
+
 .section-about {
     background-color: $clr-grey-light-1;
     padding-block: $padding-section-about;
     margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding-block: 13.5rem;
+    }
 }
 
 .section-features {
@@ -20,22 +26,38 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
     background-color: $clr-grey-light-1;
     padding: $padding-section-tours;
     margin-top: -6rem;
+
+    @include respond(tab-port) {
+        padding: 13rem 0 6rem 0;
+    }
 }
 
 .section-stories {
     position: relative;
     padding: $padding-section-stories;
+
+    @include respond(tab-port) {
+        padding: 5rem 0;
+    }
 }
 
 .section-book {
     padding: $padding-section-book;
     background-image: linear-gradient(to right bottom, $clr-primary-light, $clr-primary-dark);
+
+    @include respond(tab-port) {
+        padding: 5rem 0;
+    }
 }
 
 .book {

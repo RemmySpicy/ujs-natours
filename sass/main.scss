@@ -1,7 +1,7 @@
-@import './abstracts/variables.scss';
-@import './base';
-@import './utilities';
-@import './components';
-@import './layout';
-@import './pages/home';
+@use './abstracts';
+@use './base';
+@use './utilities';
+@use './components';
+@use './layout';
+@use './pages/home';
 
