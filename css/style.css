@@ -942,12 +942,22 @@ ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
   margin-bottom: 5rem;
 }
 
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 3.75rem;
+  }
+}
 .row::after {
   content: "";
   display: table;
   clear: both;
 }
 
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 31rem;
+  }
+}
 .row [class^=col-] {
   float: left;
 }
@@ -956,6 +966,17 @@ ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
   margin-right: 3.75rem;
 }
 
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 3.75rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
+}
 .row .col-1-of-2 {
   width: calc((100% - 3.75rem) / 2);
 }
