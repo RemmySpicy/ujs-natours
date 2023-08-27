@@ -4,6 +4,10 @@
     max-width: $grid-width;
     margin-inline: auto;
 
+    @include respond(tab-port) {
+        padding: 0 1.87rem;       
+    }
+
     
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;

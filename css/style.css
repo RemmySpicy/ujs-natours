@@ -962,6 +962,11 @@ ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
   margin-inline: auto;
 }
 
+@media (max-width: 56.25em) {
+  .row {
+    padding: 0 1.87rem;
+  }
+}
 .row:not(:last-child) {
   margin-bottom: 5rem;
 }
@@ -1070,6 +1075,11 @@ ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
   font-size: 0.93rem;
 }
 
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 5rem 0;
+  }
+}
 .footer__logo-box {
   text-align: center;
   margin-bottom: 5rem;
@@ -1086,6 +1096,12 @@ ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
   display: inline-block;
 }
 
+@media (max-width: 37.5em) {
+  .footer__navigation {
+    width: 100%;
+    text-align: center;
+  }
+}
 .footer__list {
   list-style: none;
 }
@@ -1120,6 +1136,12 @@ ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
   float: right;
 }
 
+@media (max-width: 56.25em) {
+  .footer__copyright {
+    width: 100%;
+    float: none;
+  }
+}
 .section-about {
   background-color: #f7f7f7;
   padding-block: 15.62rem;
