@@ -24,3 +24,11 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    box-sizing: border-box;
+    padding: $padding-body;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}

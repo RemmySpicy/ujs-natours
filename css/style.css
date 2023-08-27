@@ -16,6 +16,8 @@ $breakpoint argument options
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
 */
 html {
   font-size: 100%;
@@ -45,12 +47,21 @@ html {
 }
 
 body {
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: #777;
   line-height: 1.7;
-  padding: 30px;
 }
 
 .heading-primary {
@@ -69,6 +80,12 @@ body {
   animation: moveInLeft 1s ease-in-out;
 }
 
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 0.62rem;
+    font-size: 3.12rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 1.25rem;
@@ -76,6 +93,11 @@ body {
   letter-spacing: 17.4px;
 }
 
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 5px;
+  }
+}
 .heading-secondary {
   display: inline-block;
   font-size: 2.18rem;
@@ -89,6 +111,16 @@ body {
   transition: all 0.2s;
 }
 
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 1.87rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 1.75rem;
+  }
+}
 .heading-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
@@ -190,6 +222,8 @@ $breakpoint argument options
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
 */
 .btn {
   /* Animated Buttons */
@@ -758,6 +792,8 @@ $breakpoint argument options
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base > Typography > General layout > Grid > Page layout > Pomponent
 */
 .navigation__checkbox {
   display: none;
