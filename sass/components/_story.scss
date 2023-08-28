@@ -10,9 +10,24 @@
     padding-left: 5.52rem;
     font-size: $fs-400;
     transform: skewX(-12deg);
-
+    
     & > * {
         transform: skewX(12deg);
+        
+        @include respond(phone) {
+            transform: skewX(0);
+        }
+    }
+    
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 2.5rem;
+        padding-left: 4.3rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+
     }
 
     &__shape {
@@ -34,10 +49,6 @@
         translate: -2.3rem;
         scale: 1.4;
         transition: all .5s;
-    }
-
-    &__text {
-        // padding: auto;
     }
 
     &__caption {
