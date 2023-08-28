@@ -17,21 +17,26 @@
         width: 90%;
         display: block;
         transition: all .3s;
-    }
 
-    &__input:focus {
-        outline: none;
-        box-shadow: 0 .62rem 1.25rem rgb($clr-black, .1);
-        border-bottom: 3px solid $clr-primary;
-    }
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 .62rem 1.25rem rgb($clr-black, .1);
+            border-bottom: 3px solid $clr-primary;
+        }
+        
+        &:focus:invalid {
+            border-color: $clr-secondary-dark;
+        }
     
-    &__input:focus:invalid {
-        border-color: $clr-secondary-dark;
+        &::placeholder {
+            color: $clr-grey-dark-2;
+        }
     }
 
-    &__input::placeholder {
-        color: $clr-grey-dark-2;
-    }
 
     
     &__label {
@@ -54,6 +59,11 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 1.25rem;
+        }
     }
 
     &__radio-input {

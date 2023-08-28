@@ -62,18 +62,41 @@
 
 .book {
     background-image: linear-gradient(
-        100deg,  
+        105deg,  
         rgb($clr-white, .8) 50%, 
         transparent 50%), 
         url(/img/nat-10.jpg);
-    background-size: cover;
-    border-radius: $border-radius-1;
-    box-shadow: 0 .93rem 2.5rem rgb($clr-black, .2);
-
-    height: 32rem;
+        background-size: cover;
+        border-radius: $border-radius-1;
+        box-shadow: 0 .93rem 2.5rem rgb($clr-black, .2);
+                
+        @include respond(tab-land) {
+            background-image: linear-gradient(
+                100deg,  
+                rgb($clr-white, .8) 65%, 
+                transparent 65%), 
+                url(/img/nat-10.jpg);    
+        }
+            
+        @include respond(tab-port) {
+            background-image: linear-gradient(
+                to right,  
+                rgb($clr-white, .8), 
+                rgb($clr-white, .8)), 
+                url(/img/nat-10.jpg);    
+                
+        }
 
     &__form {
         width: 50%;
         padding: 3.7rem;
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+     
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
 }
